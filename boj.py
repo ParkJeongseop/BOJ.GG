@@ -65,7 +65,7 @@ def getUserInfo(userID):
 
     for k, v in zip(table.tbody.find_all('th'), table.tbody.find_all('td')):
         result.append((str(k.text).strip(), str(v.text).strip()))
-    result[0] = ("랭킹", result[0][1] + " (상위 " + str((int(result[0][1]) * 100 // 113006)) + "%)")
+    result[0] = ("랭킹", result[0][1] + " (상위 " + str((int(result[0][1]) * 1000 // 113006)/10) + "%)")
     return result
 
 def getStatus(userID):
@@ -116,7 +116,7 @@ def getAcceptedData(userID):
 
     today = datetime.date.today()
     for i in range(day_range):
-        result[str(today.year) + "." + str(today.month) + "." + str(today.day)] = 0
+        result[str(today.month) + "." + str(today.day)] = 0
         today -= datetime.timedelta(1)
 
     for i in range(cnt):
@@ -133,7 +133,7 @@ def getAcceptedData(userID):
                 if problem_date - datetime.date.today() > datetime.timedelta(days=day_range):
                     return result
                 # problem_date = ".".join(problem_date_token[0:3][0:-1])
-                problem_date = str(problem_date.year) + "." + str(problem_date.month) + "." + str(problem_date.day)
+                problem_date = str(problem_date.month) + "." + str(problem_date.day)
                 if problem_date in result:
                     result[problem_date] += 1
             except Exception as e:

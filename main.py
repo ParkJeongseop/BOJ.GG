@@ -106,6 +106,8 @@ class UserInfoWindow(object):
         self.infoTable.setShowGrid(False)
         self.infoTable.setObjectName("infoTable")
         self.infoTable.setColumnCount(2)
+        self.infoTable.setColumnWidth(0, 70)
+        self.infoTable.setColumnWidth(1, 130)
         self.infoTable.setRowCount(12)
         for i in range(self.infoTable.rowCount()):
             for j in range(self.infoTable.columnCount()):
@@ -128,7 +130,7 @@ class UserInfoWindow(object):
         self.refreshButton.setGeometry(QtCore.QRect(740, 580, 50, 50))
         self.refreshButton.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../../Downloads/1024px-OOjs_UI_icon_reload.svg.png"), QtGui.QIcon.Normal,
+        icon.addPixmap(QtGui.QPixmap("refresh.png"), QtGui.QIcon.Normal,
                        QtGui.QIcon.Off)
         self.refreshButton.setIcon(icon)
         self.refreshButton.setIconSize(QtCore.QSize(32, 32))
@@ -145,7 +147,7 @@ class UserInfoWindow(object):
         self.exitButton = QtWidgets.QPushButton(self.centralwidget)
         self.exitButton.setGeometry(QtCore.QRect(780, 580, 50, 50))
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../../Downloads/close-512.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("close.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.exitButton.setIcon(icon1)
         self.exitButton.setIconSize(QtCore.QSize(32, 32))
         self.exitButton.setObjectName("exitButton")
