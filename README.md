@@ -19,6 +19,8 @@ Beakjoon Online Judge 전적검색 및 통계 프로그램
 2.사용자 인터페이스 요구사항
  * 2-1. userID를 입력받는 window
    + 2-1-1. 프로그램 이름 label
+   + 2-1-2. 사용자 ID 입력 lineEdit
+   + 2-1-3. 검색버튼 QPushButton
  * 2-2. 전적 및 통계 표시 window
    + 2-2-1. 사용자 정보 표시 QTableWidget
    + 2-2-2. 사용자 채점 현황 QTableWidget
